@@ -1,0 +1,303 @@
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Prison Life", "Synapse")
+
+    -- Main
+
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Get Guns")
+
+    MainSection:NewButton("Get all Items", "Gives you all the Items.", function()
+        print"Grabbing Items"
+        local args = {
+            [1] = workspace.Prison_ITEMS.giver.M9.ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+        wait(0.2)
+        local args = {
+            [1] = workspace.Prison_ITEMS.giver:FindFirstChild("Remington 870").ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+        wait(0.2)
+        local args = {
+            [1] = workspace.Prison_ITEMS.giver:FindFirstChild("AK-47").ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+        wait(0.2)
+        local args = {
+            [1] = workspace.Prison_ITEMS.giver.M4A1.ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+        wait(0.2)
+        local args = {
+            [1] = workspace.Prison_ITEMS.giver:FindFirstChild("Riot Shield").ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+        wait(0.2)
+        local args = {
+            [1] = workspace.Prison_ITEMS.single:FindFirstChild("Crude Knife").ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+        wait(0.2)
+        local args = {
+            [1] = workspace.Prison_ITEMS.single.Hammer.ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+        wait(0.2)
+        print"Finished grabbing Items"
+    end)
+    
+    MainSection:NewButton("M9", "Gives you an M9.", function()
+        local args = {
+            [1] = workspace.Prison_ITEMS.giver.M9.ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+    end)
+
+
+    MainSection:NewButton("Remington 870", "Gives you an Remington 870.", function()
+        local args = {
+            [1] = workspace.Prison_ITEMS.giver:FindFirstChild("Remington 870").ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+    end)
+
+
+    MainSection:NewButton("AK47", "Gives you an AK47.", function()
+        local args = {
+            [1] = workspace.Prison_ITEMS.giver:FindFirstChild("AK-47").ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+    end)
+
+
+    MainSection:NewButton("M4A1", "Gives you an M4A1.", function()
+        local args = {
+            [1] = workspace.Prison_ITEMS.giver.M4A1.ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+    end)
+
+
+    MainSection:NewButton("Riot Shield", "Gives you an Riot Shield.", function()
+        local args = {
+            [1] = workspace.Prison_ITEMS.giver:FindFirstChild("Riot Shield").ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+    end)
+
+
+    MainSection:NewButton("Keycard", "Gives you an Keycard.", function()
+        local args = {
+            [1] = workspace.Prison_ITEMS.single:FindFirstChild("Key card").ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+    end)
+
+
+    MainSection:NewButton("Crude Knife", "Gives you an Crude Knife.", function()
+        local args = {
+            [1] = workspace.Prison_ITEMS.single:FindFirstChild("Crude Knife").ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+    end)
+
+
+    MainSection:NewButton("Hammer", "Gives you an Hammer.", function()
+        local args = {
+            [1] = workspace.Prison_ITEMS.single.Hammer.ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+    end)
+    
+
+    MainSection:NewButton("Breakfast", "Gives you an Breakfast.", function()
+        local args = {
+            [1] = workspace.Prison_ITEMS.giver.Breakfast.ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+    end)
+
+
+    MainSection:NewButton("Lunch", "Gives you an Lunch.", function()
+        local args = {
+            [1] = workspace.Prison_ITEMS.giver.Lunch.ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+    end)
+
+
+    MainSection:NewButton("Dinner", "Gives you an Dinner.", function()
+        local args = {
+            [1] = workspace.Prison_ITEMS.giver.Dinner.ITEMPICKUP
+        }
+        
+        workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+    end)
+
+
+    local MainSection = Main:NewSection("Gun Mods")
+
+    MainSection:NewButton("M9", "Gives you Gun Mods for M9.", function()
+        Game.Workspace.Remote.ItemHandler:InvokeServer(Workspace["Prison_ITEMS"].giver["M9"].ITEMPICKUP)
+local plr = game.Players.LocalPlayer
+local gun = plr.Backpack["M9"].GunStates
+local a = require(gun)
+
+a.MaxAmmo = math.huge
+a.CurrentAmmo = math.huge
+a.FireRate = 0
+a.Range = 4000
+a.Bullets = 10
+    end)
+
+
+    MainSection:NewButton("Remington 870", "Gives you Gun Mods for Remington 870.", function()
+        Game.Workspace.Remote.ItemHandler:InvokeServer(Workspace["Prison_ITEMS"].giver["Remington 870"].ITEMPICKUP)
+local plr = game.Players.LocalPlayer
+local gun = plr.Backpack["Remington 870"].GunStates
+local a = require(gun)
+
+a.MaxAmmo = math.huge
+a.CurrentAmmo = math.huge
+a.FireRate = 0
+a.Range = 4000
+a.Bullets = 10
+    end)
+
+
+    MainSection:NewButton("AK47", "Gives you Gun Mods for AK47.", function()
+        Game.Workspace.Remote.ItemHandler:InvokeServer(Workspace["Prison_ITEMS"].giver["AK-47"].ITEMPICKUP)
+local plr = game.Players.LocalPlayer
+local gun = plr.Backpack["AK-47"].GunStates
+local a = require(gun)
+
+a.MaxAmmo = math.huge
+a.CurrentAmmo = math.huge
+a.FireRate = 0
+a.Range = 4000
+a.Bullets = 10
+    end)
+
+
+    MainSection:NewButton("M4A1", "Gives you Gun Mods for M4A1.", function()
+        Game.Workspace.Remote.ItemHandler:InvokeServer(Workspace["Prison_ITEMS"].giver["M4A1"].ITEMPICKUP)
+local plr = game.Players.LocalPlayer
+local gun = plr.Backpack["M4A1"].GunStates
+local a = require(gun)
+
+a.MaxAmmo = math.huge
+a.CurrentAmmo = math.huge
+a.FireRate = 0
+a.Range = 4000
+a.Bullets = 10
+    end)
+
+    local MainSection = Main:NewSection("Teams")
+
+    MainSection:NewButton("Inmate", "Changes your team to Inmate.", function()
+        local args = {
+            [1] = "Bright orange"
+        }
+        
+        workspace.Remote.TeamEvent:FireServer(unpack(args))
+    end)
+
+    MainSection:NewButton("Guard", "Changes your team to Guard.", function()
+        local args = {
+            [1] = "Bright blue"
+        }
+        
+        workspace.Remote.TeamEvent:FireServer(unpack(args))
+    end)
+
+
+    MainSection:NewButton("Neutral", "Changes your team to Neutral.", function()
+        local args = {
+            [1] = "Medium stone grey"
+        }
+        
+        workspace.Remote.TeamEvent:FireServer(unpack(args))
+    end)
+
+    -- Player
+
+    local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+
+    PlayerSection:NewSlider("Walkspeed", "Changes the Walkspeed.", 200, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+
+    PlayerSection:NewSlider("Jumppower", "Changes the Jumppower.", 150, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+
+    -- Teleports
+
+    local Teleports = Window:NewTab("Teleports")
+    local TeleportsSection = Teleports:NewSection("Teleports")
+
+    TeleportsSection:NewButton("Yard", "Teleports you to the Yard.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(793.991333, 98.1899414, 2521.31543, 0.999006271, -5.26707531e-08, -0.0445692539, 4.93854024e-08, 1, -7.48145226e-08, 0.0445692539, 7.25391089e-08, 0.999006271)
+    end)
+
+
+    TeleportsSection:NewButton("Prison", "Teleports you to the Prison.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(916.409973, 99.9899902, 2439.09375, 0.999891043, -1.75335586e-08, -0.0147604737, 1.71773848e-08, 1, -2.42570586e-08, 0.0147604737, 2.40008706e-08, 0.999891043)
+    end)
+
+
+    TeleportsSection:NewButton("Cafeteria", "Teleports you to the Cafeteria.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(876.026489, 99.9899597, 2322.52856, -0.0306503493, -1.96888035e-08, -0.999530196, 5.59675115e-08, 1, -2.1414289e-08, 0.999530196, -5.65975711e-08, -0.0306503493)
+    end)
+
+
+    TeleportsSection:NewButton("Guard Room", "Teleports you to the Guard Room.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(837.90686, 99.9900055, 2311.51904, 0.0128645366, -8.27961628e-08, 0.999917269, -5.84977506e-08, 1, 8.35556193e-08, -0.999917269, -5.95678138e-08, 0.0128645366)
+    end)
+
+
+    TeleportsSection:NewButton("Criminal Base", "Teleports you to the Criminal Base.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-920.417664, 95.3272018, 2138.17847, -0.00843261182, 8.55668887e-08, -0.999964416, 7.16435693e-08, 1, 8.49657695e-08, 0.999964416, -7.09245356e-08, -0.00843261182)
+    end)
+
+
+    TeleportsSection:NewButton("Safe Place", "Teleports you to an Safe Place.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(880.019043, 27.7899876, 2348.49048, 0.00929285958, 4.47677762e-09, -0.999956846, -5.01732123e-09, 1, 4.43034365e-09, 0.999956846, 4.97593389e-09, 0.00929285958)
+    end)
+
+    -- Credits
+    
+    local Credits = Window:NewTab("Credits")
+    local CreditsSection = Credits:NewSection("Credits")
+    
+    CreditsSection:NewLabel("Made by Ghoul Scripts.")
+    
+    
+    CreditsSection:NewLabel("Join our Discord Server: discord.gg/DnHhjdypDx")
+    
+    
+    CreditsSection:NewLabel("Please to showcase the script DM Ghoul Scripts")
+    
+    
+    CreditsSection:NewKeybind("Toggle UI", "Toggles the UI with RightShift.", Enum.KeyCode.RightShift, function()
+        Library:ToggleUI()
+    end)
