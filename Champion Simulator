@@ -1,0 +1,781 @@
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Champion Simulator", "Synapse")
+    
+    -- Main
+    
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Buy")
+    
+    MainSection:NewButton("Buy Gloves (Must have enough)", "Buy all the Gloves you can buy.", function()
+        local args = {
+            [1] = "purchaseall",
+            [2] = 1
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchaseall",
+            [2] = 2
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchaseall",
+            [2] = 3
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchaseall",
+            [2] = 4
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchaseall",
+            [2] = 5
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchaseall",
+            [2] = 6
+        }
+             
+        game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))
+        local args = {
+            [1] = "purchaseall",
+            [2] = 7
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchaseall",
+            [2] = 8
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchaseall",
+            [2] = 9
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchaseall",
+            [2] = 10
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))
+    end)
+    
+    
+    MainSection:NewButton("Buy DNA (Must have enough)", "Buy all the DNA you can buy.", function()
+        local args = {
+            [1] = "purchaseall",
+            [2] = 1
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchaseall",
+            [2] = 2
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchaseall",
+            [2] = 3
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+                    
+        local args = {
+            [1] = "purchaseall",
+            [2] = 4
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+    
+        local args = {
+            [1] = "purchaseall",
+            [2] = 5
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+                    
+        local args = {
+            [1] = "purchaseall",
+            [2] = 6
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+                    
+        local args = {
+            [1] = "purchaseall",
+            [2] = 7
+        }
+            
+        game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+    
+        local args = {
+            [1] = "purchaseall",
+            [2] = 8
+        }
+                 
+        game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+    
+        local args = {
+            [1] = "purchaseall",
+            [2] = 9
+        }
+             
+        game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+    
+        local args = {
+            [1] = "purchaseall",
+            [2] = 10
+        }
+    
+        game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+    end)
+    
+    
+    MainSection:NewButton("Buy Classes (Must have enough)", "Buy all the Classes you can buy.", function()
+        local args = {
+            [1] = "purchase",
+            [2] = 31
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 30
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 29
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 28
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 27
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 26
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 25
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 24
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 23
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 22
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 21
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 20
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 19
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 18
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 17
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 16
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 15
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 14
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 13
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 12
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 11
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 10
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 9
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 8
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 7
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 6
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 5
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 4
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 3
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 2
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 1
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))
+    end)
+    
+    
+    MainSection:NewButton("Buy Jumps (Must have enough)", "Buy all the Jumps you can buy.", function()
+        local args = {
+            [1] = "purchase",
+            [2] = 1
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 2
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 3
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 4
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 5
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 6
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 7
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 8
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 9
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 10
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 11
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 12
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 13
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 14
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 15
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+    end)
+    
+    
+    MainSection:NewButton("Buy Auras (Must have enough)", "Buy all the Auras you can buy.", function()
+        local args = {
+            [1] = "purchase",
+            [2] = 1
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Auras:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 2
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Auras:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 3
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Auras:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 4
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Auras:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 5
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Auras:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 6
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Auras:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 7
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Auras:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 8
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Auras:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 9
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.Auras:FireServer(unpack(args))
+    end)
+    
+    
+    MainSection:NewButton("Buy Boss Hits (Must have enough)", "Buy all the Boss Hits you can buy.", function()
+        local args = {
+            [1] = "purchase",
+            [2] = 1
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 2
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 3
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 4
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 5
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 6
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 7
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 8
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 9
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 10
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 11
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 12
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 13
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 14
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+        
+        local args = {
+            [1] = "purchase",
+            [2] = 15
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+    end)
+    
+    
+    local MainSection = Main:NewSection("Sell")
+    
+    
+    MainSection:NewButton("Sell Home World", "Sell at the Home World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(38.4469986, 3.49510908, 138.078995, 0.0229667947, 0, 0.999736249, 0, 1, 0, -0.999736249, 0, 0.0229667947)
+    end)
+    
+    
+    MainSection:NewButton("Sell Cyber City", "Sell at the Cyber City.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2666.56299, 22.5863132, -19.2689972, 0.727346957, 5.80806603e-09, -0.686270416, 3.03144247e-08, 1, 4.05921377e-08, 0.686270416, -5.03284596e-08, 0.727346957)
+    end)
+    
+    
+    -- Player
+    
+    local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+    
+    PlayerSection:NewSlider("Walkspeed", "Changes the Walkspeed.", 200, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+    
+    
+    PlayerSection:NewSlider("Jumppower", "Changes the Jumppower.", 150, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+    
+    
+    -- Teleports
+    
+    local Teleports = Window:NewTab("Teleports")
+    local TeleportsSection = Teleports:NewSection("Home World")
+    
+    TeleportsSection:NewButton("Unlock all Islands", "Unlock all the Islands.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(101.668999, 815.288696, 104.992996, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(116.435997, 1608.5885, 121.769997, 1, -1.0961211e-07, 1.62202966e-15, 1.0961211e-07, 1, -3.40017117e-08, 2.10496984e-15, 3.40017117e-08, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(109.760002, 2369.87378, 114.07, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(104.375, 3845.52856, 124.574997, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(116.348999, 5811.93311, 112.263, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(101.763, 8541.32129, 106.054001, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(97.6800003, 13323.1035, 129.899994, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(96.9909973, 20372.7891, 113.470001, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    end)
+    
+    
+    TeleportsSection:NewButton("Spawn", "Teleports you to the Spawn.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-71.2149963, 3.67335081, 147.839996, 1, -7.65500019e-08, 1.02180109e-14, 7.65500019e-08, 1, -3.74306097e-08, -7.35269745e-15, 3.74306097e-08, 1)
+    end)
+    
+    
+    TeleportsSection:NewButton("Green Land", "Teleports you to the Green Land.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(101.668999, 815.288696, 104.992996, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    end)
+    
+    
+    TeleportsSection:NewButton("Lava Land", "Teleports you to the Lava Land.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(116.435997, 1608.5885, 121.769997, 1, -1.0961211e-07, 1.62202966e-15, 1.0961211e-07, 1, -3.40017117e-08, 2.10496984e-15, 3.40017117e-08, 1)
+    end)
+    
+    
+    TeleportsSection:NewButton("XMAS Land", "Teleports you to the XMAS Land.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(109.760002, 2369.87378, 114.07, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    end)
+    
+    
+    TeleportsSection:NewButton("The Void", "Teleports you to the The Void.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(104.375, 3845.52856, 124.574997, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    end)
+    
+    
+    TeleportsSection:NewButton("The Moon", "Teleports you to the The Moon.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(116.348999, 5811.93311, 112.263, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    end)
+    
+    
+    TeleportsSection:NewButton("Pirate Island", "Teleports you to the Pirate Island.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(101.763, 8541.32129, 106.054001, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    end)
+    
+    
+    TeleportsSection:NewButton("Zen Island", "Teleports you to the Zen Island.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(97.6800003, 13323.1035, 129.899994, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    end)
+    
+    
+    TeleportsSection:NewButton("Love Island", "Teleports you to the Love Island.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(96.9909973, 20372.7891, 113.470001, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    end)
+    
+    
+    local TeleportsSection = Teleports:NewSection("Cyber City")
+    
+    TeleportsSection:NewButton("Spawn", "Teleports you to the Spawn.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2712.88501, 20.8191719, -77.0289993, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    end)
+    
+    
+    -- Farming
+    
+    local Farming = Window:NewTab("Farming")
+    local FarmingSection = Farming:NewSection("Coming Soon!")
+
+    -- Credits
+    
+    local Credits = Window:NewTab("Credits")
+    local CreditsSection = Credits:NewSection("Credits")
+    
+    CreditsSection:NewLabel("Made by Ghoul Scripts.")
+    
+    
+    CreditsSection:NewLabel("Join our Discord Server: discord.gg/DnHhjdypDx")
+    
+    
+    CreditsSection:NewLabel("Please to showcase the script DM Ghoul Scripts")
+    
+    
+    CreditsSection:NewKeybind("Toggle UI", "Toggles the UI with RightShift.", Enum.KeyCode.RightShift, function()
+        Library:ToggleUI()
+    end)
