@@ -1,0 +1,461 @@
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("Ultra Clickers 4", "Synapse")
+
+        -- Main
+
+        local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+
+    MainSection:NewToggle("Autoclicker", "Toggles the Autoclicker.", function(state)
+        if state then
+            getgenv().autoClicker = true;
+
+		while wait() do
+			if getgenv().autoClicker == true then
+				workspace.Events.AddClick:FireServer()
+			end
+		end
+        else
+            getgenv().autoClicker = false;
+
+		--[[while wait() do
+			if getgenv().autoClicker == true then
+				workspace.Events.AddClick:FireServer()
+			end
+		end--]]
+        end
+    end)
+
+
+    MainSection:NewToggle("Auto open best Egg", "Automaticlly open the best Egg in the game.", function(state)
+        if state then
+            getgenv().autoOpenBestEgg = true;
+
+            while wait() do
+                if getgenv().autoOpenBestEgg == true then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6639.89014, -25.9681969, -2365.53613, -0.0603294112, -9.60165565e-08, 0.998178542, 9.46976808e-09, 1, 9.67641185e-08, -0.998178542, 1.5290242e-08, -0.0603294112)
+                    wait(0)
+
+                    local args = {
+                        [1] = "BloxyEgg",
+                        [2] = "Single"
+                    }
+                    
+                    game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+                end
+            end
+        else
+            getgenv().autoOpenBestEgg = false;
+
+            --[[while wait() do
+                if getgenv().autoOpenBestEgg == true then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6639.89014, -25.9681969, -2365.53613, -0.0603294112, -9.60165565e-08, 0.998178542, 9.46976808e-09, 1, 9.67641185e-08, -0.998178542, 1.5290242e-08, -0.0603294112)
+                    wait(0)
+
+                    local args = {
+                        [1] = "BloxyEgg",
+                        [2] = "Single"
+                    }
+                    
+                    game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+                end
+            end--]]
+        end
+    end)
+
+        -- Teleports
+
+        local Teleports = Window:NewTab("Teleports")
+    local TeleportsSection = Teleports:NewSection("Home World")
+
+    TeleportsSection:NewButton("Spawn", "Teleports you to the Spawn.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2107.77832, 0.862083435, 283.323761, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    end)
+
+
+    TeleportsSection:NewButton("Secret World", "Teleports you to the Secret World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-19421.334, -210.606796, -1684.5957, 0.629923582, -4.44061712e-08, 0.776657104, 7.94103894e-09, 1, 5.0735288e-08, -0.776657104, -2.57918895e-08, 0.629923582)
+    end)
+
+
+    TeleportsSection:NewButton("Desert", "Teleports you to the Desert.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-56.5558472, -25.5661678, 483.582703, -0.0372464657, 6.65825617e-09, 0.999306083, 6.52232213e-10, 1, -6.63856925e-09, -0.999306083, 4.0451642e-10, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Snow Land", "Teleports you to the Snow Land.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-349.896362, -25.8369694, 484.295715, -0.0372464657, 1.01387307e-07, 0.999306083, 1.13343077e-08, 1, -1.01035248e-07, -0.999306083, 7.56323715e-09, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Forest", "Teleports you to the Forest.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-659.535339, -25.5661678, 483.985413, -0.0372464657, 3.37801893e-08, 0.999306083, 1.18296999e-08, 1, -3.33627241e-08, -0.999306083, 1.05788471e-08, -0.0372464657)
+    end)
+
+    
+    TeleportsSection:NewButton("Candy Land", "Teleports you to the Candy Land.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-989.878845, -25.8369694, 502.361786, -0.0372464657, 5.18929859e-08, 0.999306083, -2.34002062e-08, 1, -5.28011981e-08, -0.999306083, -2.53506265e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Angel World", "Teleports you to the Angel World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1340.13721, -25.4075985, 496.924011, -0.0372464657, -6.23235223e-08, 0.999306083, 9.02302233e-09, 1, 6.27031085e-08, -0.999306083, 1.13522303e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Alien World", "Teleports you to the Alien World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1692.11279, -25.4075985, 529.749817, -0.0372464657, 0, 0.999306083, 0, 1, 0, -0.999306083, 0, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Lava World", "Teleports you to the Lava World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2076.51514, -25.4076042, 565.828247, -0.0372464657, -5.51222925e-08, 0.999306083, 3.89572108e-08, 1, 5.66125955e-08, -0.999306083, 4.10387955e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Atlantis", "Teleports you to the Atlantis.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2447.79541, -25.4075985, 599.312988, -0.0372464657, 1.97751522e-08, 0.999306083, 2.69043121e-09, 1, -1.96886045e-08, -0.999306083, 1.95523353e-09, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Cave", "Teleports you to the Cave.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2790.19238, -25.4075985, 629.727234, -0.0372464657, -4.1632461e-08, 0.999306083, -2.8603111e-08, 1, 4.0595264e-08, -0.999306083, -2.70712341e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Beach", "Teleports you to the Beach.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3127.46094, -25.4076042, 660.431946, -0.0372464657, 2.11451727e-08, 0.999306083, 2.19307292e-08, 1, -2.03424459e-08, -0.999306083, 2.11578275e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Cystal Cavern", "Teleports you to the Crystal Cavern.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3477.83813, -25.4075985, 690.572571, -0.0372464657, 2.18415366e-08, 0.999306083, 2.43802205e-08, 1, -2.09479953e-08, -0.999306083, 2.35830644e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Food Land", "Teleports you to the Food Land.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3876.66016, -25.4075985, 726.061523, -0.0372464657, -3.13178852e-08, 0.999306083, -3.05278363e-08, 1, 3.02017895e-08, -0.999306083, -2.9381745e-08, -0.0372464657)
+    end)
+    
+
+    TeleportsSection:NewButton("Hell", "Teleports you to the Hell.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4271.84668, -25.4075985, 762.183472, -0.0372464657, 1.98103542e-08, 0.999306083, 2.88587092e-08, 1, -1.87484783e-08, -0.999306083, 2.814037e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Robot Land", "Teleports you to the Robot Land.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4663.34814, -25.4075985, 770.230591, -0.0372464657, 5.16983611e-08, 0.999306083, 1.08917966e-07, 1, -4.76746322e-08, -0.999306083, 1.07066676e-07, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Jungle", "Teleports you to the Jungle.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5051.09277, -25.4075985, 770.230591, -0.0372464657, -3.62011421e-09, 0.999306083, -1.21251231e-08, 1, 3.17069637e-09, -0.999306083, -1.19986128e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Mushroom Forest", "Teleports you to the Mushroom Forest.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5420.2749, -25.4075985, 770.230591, -0.0372464657, 5.44465228e-09, 0.999306083, -1.90398985e-08, 1, -6.15809403e-09, -0.999306083, -1.92560545e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Flower Fields", "Teleports you to the Flower Fields.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5788.16064, -25.4075985, 770.230591, -0.0372464657, -4.21556337e-08, 0.999306083, 1.07097037e-07, 1, 4.61766625e-08, -0.999306083, 1.08742647e-07, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Toy World", "Teleports you to the Toy World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6146.40869, -25.4075985, 770.230591, -0.0372464657, 1.80692061e-09, 0.999306083, -2.27593251e-08, 1, -2.65646838e-09, -0.999306083, -2.28424764e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Mars", "Teleports you to the Mars.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6496.83936, -25.4075985, 770.230591, -0.0372464657, -8.33021687e-08, 0.999306083, -4.98683974e-08, 1, 8.15012982e-08, -0.999306083, -4.679816e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Sakura Forest", "Teleports you to the Sakura Forest.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6873.68945, -25.4075985, 770.230591, -0.0372464657, -8.78997597e-10, 0.999306083, 8.54869242e-09, 1, 1.19823762e-09, -0.999306083, 8.58739035e-09, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Jupiter", "Teleports you to the Jupiter.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7203.74512, -25.4075985, 770.230591, -0.0372464657, 0, 0.999306083, 0, 1, 0, -0.999306083, 0, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("The Void", "Teleports you to the The Void.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7553.08203, -25.4075985, 770.230591, -0.0372464657, -3.40308781e-09, 0.999306083, 4.74970392e-08, 1, 5.17577625e-09, -0.999306083, 4.76568616e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Neptune", "Teleports you to the Neptune.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7860.12988, -25.414959, 770.230591, -0.0372464657, -1.6684476e-08, 0.999306083, 4.82312572e-08, 1, 1.84937523e-08, -0.999306083, 4.88866156e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Area 51", "Teleports you to the Area 51.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8179.41943, -25.4095955, 770.230591, -0.0372464657, 2.65307669e-08, 0.999306083, -5.15349754e-08, 1, -2.84700175e-08, -0.999306083, -5.25596242e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Construction", "Teleports you to the Construction.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8512.92188, -25.4095955, 770.230591, -0.0372464657, 0, 0.999306083, 0, 1, 0, -0.999306083, 0, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Lab", "Teleports you to the Lab.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8827.84473, -25.4096012, 770.230591, -0.0372464657, -2.1394353e-09, 0.999306083, 2.45174725e-09, 1, 2.23230323e-09, -0.999306083, 2.53319143e-09, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Backdoor", "Teleports you to the Backdoor.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9149.13672, -25.4096012, 770.230591, -0.0372464657, -1.20354695e-08, 0.999306083, 3.8142467e-09, 1, 1.21859927e-08, -0.999306083, 4.2654853e-09, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Pluto", "Teleports you to the Pluto.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9471.97949, -25.4095955, 770.230591, -0.0372464657, 0, 0.999306083, 0, 1, 0, -0.999306083, 0, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Black Hole", "Teleports you to the Black Hole.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9811.21191, -25.4096012, 770.230591, -0.0372464657, -8.63095764e-08, 0.999306083, -1.88896614e-08, 1, 8.56654481e-08, -0.999306083, -1.56858189e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Sun", "Teleports you to the Sun.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10159.0156, -25.4095955, 770.230591, -0.0372464657, 0, 0.999306083, 0, 1, 0, -0.999306083, 0, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Saturn", "Teleports you to the Saturn.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10485.8232, -25.4095955, 770.230591, -0.0372464657, -1.20747945e-08, 0.999306083, -1.5370615e-08, 1, 1.15102807e-08, -0.999306083, -1.49312331e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Leaf World", "Teleports you to the Leaf World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10813.3848, -25.4095955, 770.230591, -0.0372464657, 8.13603762e-09, 0.999306083, 1.04868327e-08, 1, -7.75081865e-09, -0.999306083, 1.0190865e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Reverse World", "Teleports you to the Reverse World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11141.123, -25.4096012, 770.230591, -0.0372464657, 6.35548361e-08, 0.999306083, -6.14765057e-08, 1, -6.58903403e-08, -0.999306083, -6.38880238e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Ninja World", "Teleports you to the Ninja World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11445.1592, -25.4095955, 770.230591, -0.0372464657, -3.2516617e-08, 0.999306083, -1.22951977e-08, 1, 3.20809228e-08, -0.999306083, -1.10917648e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Among Us", "Teleports you to the Among Us.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11769.4268, -25.4095955, 770.230591, -0.0372464657, -4.49454305e-08, 0.999306083, -8.16722121e-08, 1, 4.19325268e-08, -0.999306083, -8.00537023e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Cactus World", "Teleports you to the Cactus World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12103.9141, -25.4095955, 770.230591, -0.0372464657, -7.67930786e-09, 0.999306083, -1.03814353e-08, 1, 7.29770022e-09, -0.999306083, -1.01024176e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("The Clouds", "Teleports you to the The Clouds.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12403.8135, -25.4096012, 770.230591, -0.0372464657, -8.22654556e-10, 0.999306083, 5.86790527e-09, 1, 1.04193632e-09, -0.999306083, 5.90264193e-09, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Retro", "Teleports you to the Retro.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12714.6533, -25.4095955, 770.230591, -0.0372464657, -1.58024491e-08, 0.999306083, 3.38656236e-09, 1, 1.59396478e-08, -0.999306083, 3.97790778e-09, -0.0372464657)
+    end)
+    
+
+    TeleportsSection:NewButton("Anime World", "Teleports you to the Anime World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13041.0762, -25.4096012, 770.230591, -0.0372464657, 2.74365206e-08, 0.999306083, 8.43601242e-08, 1, -2.4311273e-08, -0.999306083, 8.33960812e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("PopIt World", "Teleports you to the PopIt World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13705.5527, -25.4096012, 770.230591, -0.0372464657, 1.21631261e-09, 0.999306083, -9.20719287e-08, 1, -4.64889238e-09, -0.999306083, -9.2181196e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Toxic World", "Teleports you to the Toxic World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-14046.4111, -25.4095955, 770.230591, -0.0372464657, 5.60799762e-08, 0.999306083, -4.84935043e-08, 1, -5.79263819e-08, -0.999306083, -5.06174089e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Pirate Island", "Teleports you to the Pirate Island.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-14379.5693, -25.4095955, 770.230591, -0.0372464657, 0, 0.999306083, 0, 1, 0, -0.999306083, 0, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Soda Paradise", "Teleports you to the Soda Paradise.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-14735.5703, -25.4095955, 770.230591, -0.0372464657, 0, 0.999306083, 0, 1, 0, -0.999306083, 0, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Magic World", "Teleports you to the Magic World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15083.752, -25.4095955, 770.230591, -0.0372464657, 0, 0.999306083, 0, 1, 0, -0.999306083, 0, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Pet World", "Teleports you to the Pet World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15431.3203, -25.4095955, 770.230591, -0.0372464657, 1.3996023e-08, 0.999306083, -2.14623928e-08, 1, -1.48056944e-08, -0.999306083, -2.19989609e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Money World", "Teleports you to the Money World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15773.6641, -25.4095955, 770.230591, -0.0372464657, -3.12125437e-08, 0.999306083, 2.685004e-09, 1, 3.13342952e-08, -0.999306083, 3.85023258e-09, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Ultra World", "Teleports you to the Ultra World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16112.0508, -25.4095955, 770.230591, -0.0372464657, 9.50324885e-09, 0.999306083, -1.15493592e-09, 1, -9.55289448e-09, -0.999306083, -1.50994606e-09, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("X-World", "Teleports you to the X-World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16443.3926, -25.4095955, 770.230591, -0.0372464657, -3.47879237e-08, 0.999306083, 2.84858466e-08, 1, 3.58738106e-08, -0.999306083, 2.98022531e-08, -0.0372464657)
+    end)
+
+
+    TeleportsSection:NewButton("Final World", "Teleports you to the Final World.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16763.4434, -25.4095955, 764.279297, -0.0482926629, 4.9467468e-07, 0.998833358, -5.88805849e-09, 1, -4.95537165e-07, -0.998833358, -2.98120035e-08, -0.0482926629)
+    end)
+
+
+    local TeleportsSection = Teleports:NewSection("Moon")
+
+    TeleportsSection:NewButton("Spawn", "Teleports you to the Spawn.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1200.30115, 43.6094589, -2526.22778, 0.999599814, 1.11165743e-09, -0.0282881502, -8.6116933e-11, 1, 3.62545798e-08, 0.0282881502, -3.62376333e-08, 0.999599814)
+    end)
+
+
+    TeleportsSection:NewButton("Meteors Planet", "Teleports you to the Meteors Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-48.8541336, -25.9681969, -2530.23804, -0.0950454473, -3.79687428e-08, 0.995472908, -4.79698337e-10, 1, 3.80956102e-08, -0.995472908, 3.14328763e-09, -0.0950454473)
+    end)
+    
+
+    TeleportsSection:NewButton("Noob Planet", "Teleports you to the Noob Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-368.79483, -25.9681969, -2526.35254, -0.0950454473, 0, 0.995472908, 0, 1, 0, -0.995472908, 0, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("Earth", "Teleports you to the Earth.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-673.263489, -25.9681969, -2525.37158, -0.0950454473, 1.95304732e-08, 0.995472908, -6.4913408e-08, 1, -2.58170729e-08, -0.995472908, -6.70733371e-08, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("New Galaxy", "Teleports you to the New Galaxy.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-969.506165, -25.9681969, -2526.41309, -0.0950454473, 1.54083946e-08, 0.995472908, 7.54819152e-10, 1, -1.54063979e-08, -0.995472908, -7.12906012e-10, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("New Universe", "Teleports you to the Universe.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1277.47595, -25.9681969, -2526.97144, -0.0950454473, 5.4400374e-08, 0.995472908, 1.77878405e-08, 1, -5.29494244e-08, -0.995472908, 1.26747119e-08, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("Old Planet", "Teleports you to the Old Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1611.49158, -25.9681969, -2529.44116, -0.0950454473, 4.46305641e-08, 0.995472908, -1.78543846e-08, 1, -4.65382222e-08, -0.995472908, -2.21968044e-08, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("Hacker Planet", "Teleports you to the Hacker Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1960.78418, -25.9682026, -2510.23413, -0.0950454697, -2.24222472e-08, 0.995472908, -3.01367038e-08, 1, 1.96468317e-08, -0.995472908, -2.81329307e-08, -0.0950454697)
+    end)
+
+
+    TeleportsSection:NewButton("Golden Planet", "Teleports you to the Golden Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2314.79761, -25.9681969, -2494.61938, -0.0950454473, -8.45294252e-08, 0.995472908, -3.0737425e-08, 1, 8.19791026e-08, -0.995472908, -2.28065336e-08, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("White Hole", "Teleports you to the White Hole.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2660.64917, -25.9681969, -2475.52563, -0.0950454473, 9.91883766e-08, 0.995472908, -8.36776071e-09, 1, -1.00438385e-07, -0.995472908, -1.78760899e-08, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("Rainbow Planet", "Teleports you to the Rainbow Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3012.54688, -25.9681969, -2460.94214, -0.0950454473, -1.13044415e-07, 0.995472908, -1.37628611e-08, 1, 1.12244457e-07, -0.995472908, -3.03223135e-09, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("New Game Planet", "Teleports you to the New Game Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3367.71753, -25.9681969, -2471.1189, -0.0950454623, -1.04453072e-07, 0.995472908, -1.31323628e-08, 1, 1.03674246e-07, -0.995472908, -3.21914539e-09, -0.0950454623)
+    end)
+
+
+    TeleportsSection:NewButton("Strange Planet", "Teleports you to the Strange Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3721.01221, -25.9681969, -2467.93262, -0.0950454473, -5.34061328e-08, 0.995472908, -1.95959569e-08, 1, 5.17780308e-08, -0.995472908, -1.45859786e-08, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("Red Planet", "Teleports you to the Red Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4042.98828, -25.9682026, -2469.95044, -0.0950454324, 1.80564825e-08, 0.995472908, 7.70614594e-09, 1, -1.7402833e-08, -0.995472908, 6.01720007e-09, -0.0950454324)
+    end)
+
+
+    TeleportsSection:NewButton("Blue Planet", "Teleports you to the Blue Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4396.71875, -25.9681969, -2468.25635, -0.0950454473, -1.5154928e-08, 0.995472908, -3.63406194e-08, 1, 1.17541283e-08, -0.995472908, -3.50589282e-08, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("Game Over Planet", "Teleports you to the Game Over Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4771.98242, -25.9682026, -2467.90967, -0.0950454473, -5.05480857e-09, 0.995472908, -1.55386974e-08, 1, 3.59419738e-09, -0.995472908, -1.51267407e-08, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("Bug Planet", "Teleports you to the Bug Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5106.82861, -25.9682026, -2434.21436, -0.0950454473, -2.93682163e-08, 0.995472908, -7.32699377e-08, 1, 2.25061285e-08, -0.995472908, -7.07991319e-08, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("Hidden Planet", "Teleports you to the Hidden Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5442.50049, -25.9681969, -2420.94971, -0.0950454473, 1.21135884e-08, 0.995472908, 3.21975863e-10, 1, -1.21379351e-08, -0.995472908, -8.33137281e-10, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("Ghost Planet", "Teleports you to the Ghost Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5784.97607, -25.7277756, -2404.55225, -0.0950454473, -1.40633638e-08, 0.995472908, 1.12969083e-07, 1, 2.49133461e-08, -0.995472908, 1.14825568e-07, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("RedVsBlue Planet", "Teleports you to the RedVsBlue Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6164.10791, -25.9201164, -2385.57544, -0.0950454473, 1.94248528e-08, 0.995472908, 5.14303267e-08, 1, -1.46027412e-08, -0.995472908, 4.98095716e-08, -0.0950454473)
+    end)
+
+
+    TeleportsSection:NewButton("Bloxy Planet", "Teleports you to the Bloxy Planet.", function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6551.6333, -25.9681969, -2368.3479, -0.0950454473, -5.21444832e-10, 0.995472908, -1.1552157e-09, 1, 4.13518886e-10, -0.995472908, -1.11068288e-09, -0.0950454473)
+    end)
+
+        -- Player
+    
+    local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+    
+    PlayerSection:NewSlider("Walkspeed", "Changes the Walkspeed.", 100, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+    
+    PlayerSection:NewSlider("Jumppower", "Changes the Jumppower.", 75, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+
+-- Credits
+    
+local Credits = Window:NewTab("Credits")
+local CreditsSection = Credits:NewSection("Credits")
+
+CreditsSection:NewLabel("Made by Ghoul Scripts.")
+
+
+CreditsSection:NewLabel("Join our Discord Server: discord.gg/DnHhjdypDx")
+
+
+CreditsSection:NewLabel("Please to showcase the script DM Ghoul Scripts")
+
+
+CreditsSection:NewKeybind("Toggle UI", "Toggles the UI with RightShift.", Enum.KeyCode.RightShift, function()
+    Library:ToggleUI()
+end)
